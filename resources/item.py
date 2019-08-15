@@ -31,7 +31,7 @@ class Item(Resource):
         try:
             item.save_to_db()
         except:
-            return {'message' : 'error inserting into database'}, 500
+            return {'message' : 'error inserting into {} database with args {}'.format(name, req_data)}, 500
         return {'item': item.json()}, 201
     
     def delete(self, name):
