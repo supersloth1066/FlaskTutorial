@@ -54,4 +54,5 @@ class Items(Resource):
 api.add_resource(Item, '/items/<string:name>')
 api.add_resource(Items, '/items')
 
-app.run(port='80', host='0.0.0.0', debug=False)
+if __name__ == '__main__':
+    app.run(port='80', host='0.0.0.0', debug=False)
